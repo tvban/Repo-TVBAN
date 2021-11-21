@@ -17,7 +17,7 @@ ADDONTITLE = '[COLOR azure][B]TVBAN[/B][/COLOR] [COLOR lime][B]MATRIX[/B][/COLOR
 BUILDERNAME = 'JoseaTEBA & DavidZgZ'
 EXCLUDES = [ADDON_ID, 'repository.TVBAN-Matrix']
 # Text File with build info in it.
-BUILDFILE = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/wizardfiles/builds.txt'
+BUILDFILE = 'https://raw.githubusercontent.com/tvban/Repo-TVBAN/master/wizardfiles/builds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0

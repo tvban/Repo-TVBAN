@@ -98,7 +98,7 @@ def force_check_updates(auto=False, over=False):
     
     if not over:
         logging.log_notify(CONFIG.ADDONTITLE,
-                           '[COLOR {0}]Forzar la Comprobacion de Actualizaciones[/COLOR]'.format(CONFIG.COLOR2))
+                           '[COLOR {0}]Forzar la Comprobación de Actualizaciones[/COLOR]'.format(CONFIG.COLOR2))
 
     dbfile = latest_db('Addons')
     dbfile = os.path.join(CONFIG.DATABASE, dbfile)
@@ -120,7 +120,7 @@ def force_check_updates(auto=False, over=False):
         checked_time = 0
         for repo in installed_repos.fetchall():
             repo = repo[0]
-            logging.log('Comprobacion forzada {0}...'.format(repo), level=xbmc.LOGDEBUG)
+            logging.log('Comprobación forzada {0}...'.format(repo), level=xbmc.LOGDEBUG)
             while checked_time < start_time:
                 if time.time() >= start_time + 20:
                     logging.log('{0} se agotó el tiempo durante la verificación forzada del repo.'.format(repo), level=xbmc.LOGDEBUG)
@@ -134,9 +134,9 @@ def force_check_updates(auto=False, over=False):
                     
                 xbmc.sleep(1000)
             checked_time = 0
-            logging.log('{0} fuerza comprobada con éxito.'.format(repo), level=xbmc.LOGDEBUG)
+            logging.log('{0} comprobación forzada con éxito.'.format(repo), level=xbmc.LOGDEBUG)
             logging.log_notify('[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, CONFIG.ADDONTITLE),
-                               "[COLOR {0}]{1} fuerza comprobada con éxito.[/COLOR]".format(CONFIG.COLOR2, repo))
+                               "[COLOR {0}]{1} comprobación forzada con éxito.[/COLOR]".format(CONFIG.COLOR2, repo))
             
     sqlexe.close()
                     
@@ -303,7 +303,7 @@ def toggle_dependency(name, dp=None):
 #
 #     do = gui.DIALOG.yesno(CONFIG.ADDONTITLE,
 #                           "[COLOR {0}]Would you like to [COLOR {1}]Enable[/COLOR] or [COLOR {2}]Disable[/COLOR] all Adult add-ons?[/COLOR]".format(CONFIG.COLOR2, CONFIG.COLOR1, CONFIG.COLOR1),
-#                           yeslabel="[B][COLOR springgreen]Enable[/COLOR][/B]",
+#                           yeslabel="[B][COLOR cyan]Enable[/COLOR][/B]",
 #                           nolabel="[B][COLOR red]Disable[/COLOR][/B]")
 #     state = 'true' if do == 1 else 'false'
 #     goto = 'Enabling' if do == 1 else 'Disabling'
@@ -319,7 +319,7 @@ def toggle_dependency(name, dp=None):
 #     if len(found) > 0:
 #         if gui.DIALOG.yesno(CONFIG.ADDONTITLE,
 #                             "[COLOR {0}]Would you like to view a list of the add-ons that where {1}?[/COLOR]".format(CONFIG.COLOR2, goto.replace('ing', 'ed')),
-#                             yeslabel="[B][COLOR springgreen]View List[/COLOR][/B]",
+#                             yeslabel="[B][COLOR cyan]View List[/COLOR][/B]",
 #                             nolabel="[B][COLOR red]Cancel[/COLOR][/B]"):
 #             editlist = '[CR]'.join(found)
 #             gui.show_text_box(CONFIG.ADDONTITLE,
@@ -368,7 +368,7 @@ def fix_metas():
 #
 #     if dialog.yesno(CONFIG.ADDONTITLE,
 #                         "[COLOR {0}]Would you like to [COLOR {1}]hide[/COLOR] all passwords when typing in the add-on settings menus?[/COLOR]".format(CONFIG.COLOR2),
-#                         yeslabel="[B][COLOR springgreen]Hide Passwords[/COLOR][/B]",
+#                         yeslabel="[B][COLOR cyan]Hide Passwords[/COLOR][/B]",
 #                         nolabel="[B][COLOR red]No Cancel[/COLOR][/B]"):
 #         count = 0
 #         for folder in glob.glob(os.path.join(CONFIG.ADDONS, '*/')):
@@ -402,7 +402,7 @@ def fix_metas():
 #
 #     if dialog.yesno(CONFIG.ADDONTITLE,
 #                         "[COLOR {0}]Would you like to [COLOR {1}]unhide[/COLOR] all passwords when typing in the add-on settings menus?[/COLOR]".format(CONFIG.COLOR2, CONFIG.COLOR1),
-#                         yeslabel="[B][COLOR springgreen]Unhide Passwords[/COLOR][/B]",
+#                         yeslabel="[B][COLOR cyan]Unhide Passwords[/COLOR][/B]",
 #                         nolabel="[B][COLOR red]No Cancel[/COLOR][/B]"):
 #         count = 0
 #         for folder in glob.glob(os.path.join(CONFIG.ADDONS, '*/')):

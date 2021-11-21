@@ -44,7 +44,7 @@ class Wizard:
     def _prompt_for_wipe(self):
         # Should we wipe first?
         if self.dialog.yesno(CONFIG.ADDONTITLE,
-                           "[COLOR {0}][B]Desea restaurar su".format(CONFIG.COLOR2) +'\n' + "configuración de Kodi a la configuración predeterminada" + '\n' + "Antes de instalar la Copia de Seguridad de la Build?[/B][/COLOR]",
+                           "[COLOR {0}]Desea restaurar su".format(CONFIG.COLOR2) +'\n' + "configuración de Kodi a la configuración predeterminada" + '\n' + "Antes de instalar la Copia de Seguridad de la Build?[/COLOR]",
                            nolabel='[B][COLOR red]No[/COLOR][/B]',
                            yeslabel='[B][COLOR cyan]Si[/COLOR][/B]'):
             install.wipe()
@@ -73,12 +73,12 @@ class Wizard:
             warning = False
 
         if warning:
-            yes_pressed = self.dialog.yesno("[B]{0} - [COLOR red]ADVERTENCIA!![/COLOR][/B]".format(CONFIG.ADDONTITLE), '[COLOR {0}][B]Exíste la posibilidad de que el Skin no se vea correctamente'.format(CONFIG.COLOR2) + '\n' + 'Al instalar una {0} Build en un Kodi {1} instalado'.format(check.check_build(name, 'kodi'), CONFIG.KODIV) + '\n' + 'Todavía te gustaría instalar: [COLOR {0}]{1} v{2}[/COLOR]?[/B][/COLOR]'.format(CONFIG.COLOR1, name, check.check_build(name, 'version')), nolabel='[B][COLOR red]No, Cancelar[/COLOR][/B]', yeslabel='[B][COLOR cyan]Si, Instalar[/COLOR][/B]')
+            yes_pressed = self.dialog.yesno("[B]{0} - [COLOR red]ADVERTENCIA!![/COLOR][/B]".format(CONFIG.ADDONTITLE), '[COLOR {0}]Exíste la posibilidad de que el Skin no se vea correctamente'.format(CONFIG.COLOR2) + '\n' + 'Al instalar una {0} Build en un Kodi {1} instalado'.format(check.check_build(name, 'kodi'), CONFIG.KODIV) + '\n' + 'Todavía te gustaría instalar: [COLOR {0}]{1} v{2}[/COLOR]?[/COLOR]'.format(CONFIG.COLOR1, name, check.check_build(name, 'version')), nolabel='[B][COLOR red]No, Cancelar[/COLOR][/B]', yeslabel='[B][COLOR cyan]Si, Instalar[/COLOR][/B]')
         else:
             if over:
                 yes_pressed = 1
             else:
-                yes_pressed = self.dialog.yesno(CONFIG.ADDONTITLE, '[COLOR {0}][B]La Instalación Sobreescribirá los datos de su Kodi Actual![/B]'.format(CONFIG.COLOR2)  + '\n\n' + '[COLOR {0}]Le gustaría Descargar e Instalar: '.format(CONFIG.COLOR2) + '[B][COLOR {0}]{1} v{2}[/COLOR][/B]?[/COLOR]'.format(CONFIG.COLOR1, name, check.check_build(name,'version')), nolabel='[B][COLOR red]No, Cancelar[/COLOR][/B]', yeslabel='[B][COLOR cyan]Si, Instalar[/COLOR][/B]')
+                yes_pressed = self.dialog.yesno(CONFIG.ADDONTITLE, '[COLOR red][B]AVISO!![/B]'.format(CONFIG.ADDONTITLE)  + '\n' + '[COLOR {0}][B]La Instalación Sobreescribirá los datos de su Kodi Actual![/B]'.format(CONFIG.COLOR2)  + '\n\n' + '[COLOR {0}][B]Le gustaría Descargar e Instalar:[/B] '.format(CONFIG.COLOR2) + '[B][COLOR {0}]{1} v{2}[/COLOR]?[/B][/COLOR]'.format(CONFIG.COLOR1, name, check.check_build(name,'version')), nolabel='[B][COLOR red]No, Cancelar[/COLOR][/B]', yeslabel='[B][COLOR cyan]Si, Instalar[/COLOR][/B]')
         if yes_pressed:
             CONFIG.clear_setting('build')
             buildzip = check.check_build(name, 'url')
@@ -112,7 +112,7 @@ class Wizard:
             self.dialogProgress.update(0, title + '\n' + 'Espere por Favor')
             percent, errors, error = extract.all(lib, CONFIG.HOME, title=title)
             
-            skin.skin_to_default('Instalar Build')
+            skin.skin_to_default('Install Build')
 
             if int(float(percent)) > 0:
                 db.fix_metas()
@@ -133,7 +133,7 @@ class Wizard:
 
                 if int(float(errors)) > 0:
                     yes_pressed = self.dialog.yesno(CONFIG.ADDONTITLE,
-                                       '[COLOR {0}][COLOR {1}]{2} v{3}[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1, name, check.check_build(name, 'version')) +'\n' + 'Completado: [COLOR {0}]{1}{2}[/COLOR] [Errores:[COLOR {3}]{4}[/COLOR]]'.format(CONFIG.COLOR1, percent, '%', CONFIG.COLOR1, errors) + '\n' + 'Le gustaria ver los errores?[/COLOR]',
+                                       '[COLOR {0}][COLOR {1}]{2} v{3}[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1, name, check.check_build(name, 'version')) +'\n\n' + '[B]Completado:[/B] [COLOR {0}]{1}{2}[/COLOR] [B][Errores:[/B][COLOR {3}]{4}[/COLOR]]'.format(CONFIG.COLOR1, percent, '%', CONFIG.COLOR1, errors) + '\n' + '[B]Le gustaría ver los errores?[/B][/COLOR]',
                                        nolabel='[B][COLOR red]No, Gracias[/COLOR][/B]',
                                        yeslabel='[B][COLOR cyan]Ver Errores[/COLOR][/B]')
                     if yes_pressed:
@@ -144,7 +144,7 @@ class Wizard:
                 from resources.libs.gui.build_menu import BuildMenu
                 themecount = BuildMenu().theme_count(name)
 
-                if themecount > 0:
+                if themecount > 99:
                     self.theme(name)
 
                 db.addon_database(CONFIG.ADDON_ID, 1)
@@ -152,7 +152,7 @@ class Wizard:
                 if os.path.exists(os.path.join(CONFIG.USERDATA, '.enableall')):
                 	CONFIG.set_setting('enable_all', 'true')
 
-                self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}][B]Para guardar los cambios, ahora necesita Forzar el Cierre de Kodi.[/B] \nPresione [B]OK[/B] para Forzar el Cierre de Kodi.[/COLOR]".format(CONFIG.COLOR2))
+                self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}][B]Para guardar los cambios, ahora necesita Forzar el Cierre de Kodi.[/B] \n\nPresione [B]OK[/B] para Forzar el Cierre de Kodi.[/COLOR]".format(CONFIG.COLOR2))
                 tools.kill_kodi(over=True)
             else:
                 from resources.libs.gui import window
@@ -214,14 +214,14 @@ class Wizard:
             installed = db.grab_addons(lib)
             db.addon_database(installed, 1, True)
 
-            self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}][B]Para guardar los cambios, ahora necesita Forzar el Cierre de Kodi.[/B] \nPresione [B]OK[/B] para Forzar el Cierre de Kodi.[/COLOR]".format(CONFIG.COLOR2))
+            self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}][B]Para guardar los cambios, ahora necesita Forzar el Cierre de Kodi.[/B] \n\nPresione [B]OK[/B] para Forzar el Cierre de Kodi.[/COLOR]".format(CONFIG.COLOR2))
             tools.kill_kodi(over=True)
         else:
             logging.log_notify(CONFIG.ADDONTITLE,
                                '[COLOR {0}]Corrección Gui:[/COLOR] [COLOR gold]Cancelado![/COLOR]'.format(CONFIG.COLOR2))
 
     def theme(self, name, theme='', over=False):
-        installtheme = False
+        installtheme = True
 
         if not theme:
             themefile = check.check_build(name, 'theme')
@@ -231,7 +231,7 @@ class Wizard:
                 from resources.libs.gui.build_menu import BuildMenu
                 themes = BuildMenu().theme_count(name, False)
                 if len(themes) > 0:
-                    if self.dialog.yesno(CONFIG.ADDONTITLE, "[COLOR {0}][B]La Build [COLOR {1}]{2}[/COLOR] viene con [COLOR {3}]{4}[/COLOR] Parche de actualización[/B]".format(CONFIG.COLOR2, CONFIG.COLOR1, name, CONFIG.COLOR1, len(themes)) + '\n\n' + "Le gustaría instalar el Parche de actualización ahora?[/COLOR]",
+                    if self.dialog.yesno(CONFIG.ADDONTITLE, "[COLOR {0}][B]La Build [COLOR {1}]{2}[/COLOR] viene con [COLOR {3}]{4}[/COLOR] Parche de actualización[/B]".format(CONFIG.COLOR2, CONFIG.COLOR1, name, CONFIG.COLOR1, len(themes)) + '\n\n' + "[B]Le gustaría instalar el Parche de actualización ahora?[/B][/COLOR]",
                                     yeslabel="[B][COLOR cyan]Instalar Parche[/COLOR][/B]",
                                     nolabel="[B][COLOR red]Cancelar Parche[/COLOR][/B]"):
                         logging.log("Lista de Parches: {0}".format(str(themes)))
@@ -280,22 +280,63 @@ class Wizard:
                 try:
                     os.remove(lib)
                 except:
-                    pass     
+                    pass
+                    
                 return
+            
             self.dialogProgress.update(0, '\n' + "Instalando {0}".format(name))
+
+            test1 = False
+            test2 = False
+            
             from resources.libs import skin
             from resources.libs import test
+            test1 = test.test_theme(lib) if CONFIG.SKIN not in skin.DEFAULT_SKINS else False
+            #test2 = test.test_gui(lib) if CONFIG.SKIN not in skin.DEFAULT_SKINS else False
+
+            if test1:
+                skin.look_and_feel_data('save')
+                xbmc.log('test1= ' + str(test1), xbmc.LOGINFO)
+                swap = skin.skin_to_default('Theme Install')
+
+                if not swap:
+                    return False
+
+                xbmc.sleep(500)
+
             title = '[COLOR {0}][B]Instalando Parche:[/B][/COLOR] [COLOR {1}]{2}[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1, theme)
             self.dialogProgress.update(0, title + '\n' + 'Espere por Favor')
             percent, errors, error = extract.all(lib, CONFIG.HOME, title=title)
             CONFIG.set_setting('buildtheme', theme)
             logging.log('INSTALADO {0}: [ERRORES:{1}]'.format(percent, errors))
             self.dialogProgress.close()
+
+            #db.force_check_updates(over=True)
             installed = db.grab_addons(lib)
             db.addon_database(installed, 1, True)
-            xbmc.executebuiltin("ReloadSkin()")
-            xbmc.sleep(1000)
-            xbmc.executebuiltin("Container.Refresh()")
+
+            self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}][B]Para guardar los cambios, ahora necesita Forzar el Cierre de Kodi.[/B] \n\nPresione [B]OK[/B] para Forzar el Cierre de Kodi.[/COLOR]".format(CONFIG.COLOR2))
+            tools.kill_kodi(over=True)
+            
+            if test2:
+                skin.look_and_feel_data('save')
+                xbmc.log('test2= ' + str(test2), xbmc.LOGINFO)
+                skin.skin_to_default("Theme Install")
+                gotoskin = CONFIG.get_setting('defaultskin')
+                skin.switch_to_skin(gotoskin, "Theme Installer")
+                skin.look_and_feel_data('restore')
+            elif test1:
+                #skin.look_and_feel_data('save')
+                #skin.skin_to_default("Theme Install")
+                gotoskin = CONFIG.get_setting('default.skin')
+                skin.switch_to_skin(gotoskin, "Theme Installer")
+                skin.look_and_feel_data('restore')
+                if xbmc.getCondVisibility("Window.isVisible(yesnodialog)"):
+                	xbmc.executebuiltin('SendClick(yesnodialog, 11)')
+            else:
+                xbmc.executebuiltin("ReloadSkin()")
+                xbmc.sleep(1000)
+                xbmc.executebuiltin("Container.Refresh()")
         else:
             logging.log_notify(CONFIG.ADDONTITLE,
                                '[COLOR {0}]Instalación Parche:[/COLOR] [COLOR gold]Cancelado![/COLOR]'.format(CONFIG.COLOR2))

@@ -15,9 +15,9 @@ ART = os.path.join(PATH, 'resources', 'media')
 #########################################################
 ADDONTITLE = '[COLOR azure][B]TVBAN[/B][/COLOR] [COLOR lime][B]MATRIX[/B][/COLOR]'
 BUILDERNAME = 'JoseaTEBA & DavidZgZ'
-EXCLUDES = [ADDON_ID, 'repository.tvbanMatrix']
+EXCLUDES = [ADDON_ID, 'repository.TVBAN-Matrix']
 # Text File with build info in it.
-BUILDFILE = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/wizardfiles/builds.txt'
+BUILDFILE = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/wizardfiles/builds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0
@@ -29,7 +29,7 @@ YOUTUBEFILE = 'http://'
 # Text File for addon installer.  Leave as 'http://' to ignore
 ADDONFILE = 'http://'
 # Text File for advanced settings.  Leave as 'http://' to ignore
-ADVANCEDFILE = 'https://raw.githubusercontent.com/tvban/tvban.github.io/master/wizard/xml/Advanced.json'
+ADVANCEDFILE = 'https://raw.githubusercontent.com/TVBAN/TVBAN.github.io/master/wizard/xml/Advanced.json'
 #########################################################
 
 #########################################################
@@ -94,7 +94,7 @@ CONTACTFANART = 'http://'
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE = 'Yes'
 # Url to wizard version
-WIZARDFILE = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/wizardfiles/builds.txt' 
+WIZARDFILE = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/wizardfiles/builds.txt' 
 #########################################################
 
 #########################################################
@@ -103,11 +103,11 @@ WIZARDFILE = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/w
 # Enable Auto Install 'Yes' or 'No'
 AUTOINSTALL = 'No'
 # Addon ID for the repository
-REPOID = 'repository.GTKing-Matrix'
+REPOID = 'repository.TVBAN-Matrix'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/matrix/zips/addons.xml'
+REPOADDONXML = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/matrix/zips/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/matrix/zips/repository.GTKing-Matrix/'
+REPOZIPURL = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/matrix/zips/repository.TVBAN-Matrix/'
 #########################################################
 
 #########################################################
@@ -116,14 +116,14 @@ REPOZIPURL = 'https://raw.githubusercontent.com/gtkingbuild/Repo-Prueba/master/m
 # Enable Notification screen Yes or No
 ENABLE = 'Yes'
 # Url to notification file
-NOTIFICATION = 'https://raw.githubusercontent.com/tvban/Repo-TVBAN-Matrix/master/wizardfiles/TVBAN/Notify.txt'
+NOTIFICATION = 'https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/wizardfiles/TVBAN/Notify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE = 'Image'
 # Font size of header
 FONTHEADER = ''
 HEADERMESSAGE = '[COLOR azure][B]TVBAN[/B][/COLOR] [COLOR lime][B]MATRIX[/B][/COLOR]'
 # url to image if using Image 424x180
-HEADERIMAGE = 'https://i.imgur.com/q0lMW7O.png'
+HEADERIMAGE = 'https://i.imgur.com/7tsuHwV.png'
 # Font for Notification Window
 FONTSETTINGS = ''
 # Background for Notification Window

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.tvban-Leia" name="[B]Repo [COLOR dodgerblue]TVBAN[/COLOR][/B]" version="7.1.21" provider-name="tvban">
+       <extension point="xbmc.addon.repository" name="TVBAN Repo">
+              <info>https://raw.githubusercontent.com/tvban/Repo-TVBAN/master/addons.xml</info>
+              <checksum>https://raw.githubusercontent.com/tvban/Repo-TVBAN/master/addons.xml.md5</checksum>
+              <datadir zip="true">https://raw.githubusercontent.com/tvban/Repo-TVBAN/master/</datadir>
+       </extension>
+       <extension point="xbmc.addon.metadata">
+              <summary>Repo [COLOR dodgerblue]TVBAN[/COLOR]</summary>
+              <description lang="es">Repositorio de addons [COLOR dodgerblue]TVBAN[/COLOR]</description>
+              <disclaimer></disclaimer>
+              <platform>all</platform>
+       </extension>
+</addon>

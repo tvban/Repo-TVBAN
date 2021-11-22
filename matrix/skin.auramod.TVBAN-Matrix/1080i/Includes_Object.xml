@@ -8717,17 +8717,17 @@
           </item>
           <item>
 		    <label>Builds</label>
-            <onclick>ActivateWindow(Programs,"plugin://plugin.program.GTKing-Matrix/?mode=builds",return)</onclick>
+            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=builds",return)</onclick>
             <thumb>special://skin/extras/icons/GTkingMa.png</thumb>
           </item>
           <item>
             <label>Mantenimiento</label>
-            <onclick>ActivateWindow(Programs,"plugin://plugin.program.GTKing-Matrix/?mode=maint",return)</onclick>
+            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=maint",return)</onclick>
             <thumb>special://skin/extras/icons/GTKingBeelink.png</thumb>			
           </item>
           <item>
             <label>Gestionar Buffer</label>
-            <onclick>ActivateWindow(Programs,"plugin://plugin.program.GTKing-Matrix/?mode=advanced_settings&amp;url=https%3A%2F%2Fraw.githubusercontent.com%2Fgtkingbuild%2Fgtkingbuild.github.io%2Fmaster%2Fwizard%2Fxml%2FAdvance-Matrix.json",return)</onclick>
+            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=advanced_settings&amp;url=https%3A%2F%2Fraw.githubusercontent.com%2Fgtkingbuild%2Fgtkingbuild.github.io%2Fmaster%2Fwizard%2Fxml%2FAdvance-Matrix.json",return)</onclick>
             <thumb>special://skin/extras/icons/hourglass2.png</thumb>
           </item>		  
           <item>
@@ -8742,7 +8742,7 @@
 		   <item>
 		   <label>Archivos - Log</label>
 		   <thumb>special://skin/extras/icons/log.png</thumb>
-		   <onclick>ActivateWindow(Programs,"plugin://plugin.program.GTKing-Matrix/?mode=maint&amp;name=logging",return)</onclick>
+		   <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=maint&amp;name=logging",return)</onclick>
 		 </item>
         </content>
       </control>

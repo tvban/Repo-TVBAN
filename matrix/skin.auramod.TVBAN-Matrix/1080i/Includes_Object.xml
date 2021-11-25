@@ -8888,7 +8888,7 @@
           </item>
           <item>
 		    <label>Test Velocidad</label>
-            <onclick>ActivateWindow(Programs,"plugin://plugin.program.GTKing-Matrix/?mode=speedtest",return)</onclick>
+            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=speedtest",return)</onclick>
             <thumb>special://skin/extras/icons/timer.png</thumb>         
           </item>
        </content>

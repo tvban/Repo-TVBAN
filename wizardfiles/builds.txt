@@ -4,7 +4,7 @@ zip="https://github.com/gtkingbuild/gtkingbuild.github.io/tree/master/addons.de.
 
 name="GTKing Matrix"
 version="1.0"
-url="https://github.com/gtkingbuild/Repo-GTKing/releases/download/1.0/GTKing.MATRIX.zip"
+url="https://github.com/tvban/Repo-TVBAN/releases/download/1.0/TVBAN.Marix.zip"
 minor="http://"
 gui="http://"
 kodi="19"

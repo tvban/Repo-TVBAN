@@ -161,21 +161,6 @@
             <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/repo/master/Palantir/</datadir>
         </dir>
-		<dir minversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/main/Elementum-ARM/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/tvban/Repo-TVBAN/master/Elementum-ARM/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN//master/Elementum-ARM/zips</datadir>
-        </dir>
-		<dir minversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/main/Elementum-Wx64/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/Elementum-Wx64/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN//master/Elementum-Wx64/zips</datadir>
-        </dir>
-		<dir minversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/main/Elementum-Wx86/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/TVBAN/Repo-TVBAN/master/Elementum-Wx86/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/TVBAN/Repo-TVBAN//master/Elementum-Wx86/zips</datadir>
-        </dir>
     </extension>
 
     <extension point="xbmc.addon.metadata">

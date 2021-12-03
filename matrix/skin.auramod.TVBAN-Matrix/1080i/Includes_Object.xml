@@ -6183,7 +6183,7 @@
           <height>60</height>
           <font>font_tiny_bold</font>
           <align>left</align>
-          <textcolor>white</textcolor>
+          <textcolor>ff76f110</textcolor> <!--white  -->
           <label>[B]$INFO[Weather.Temperature][/B]</label>
           <visible>Weather.IsFetched</visible>
         </control>
@@ -6250,7 +6250,7 @@
           <align>right</align>
           <alignx>right</alignx>
           <textcolor>white</textcolor>
-          <label>[B]$INFO[System.Time(hh:mm)][COLOR dodgerblue] | [/COLOR]$INFO[System.Date(d.m.yyyy)][/B]</label>
+          <label>[B]$INFO[System.Time(hh:mm)][COLOR ff76f110] | [/COLOR]$INFO[System.Date(d.m.yyyy)][/B]</label> <!--dodgerblue -->
           <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(extendedprogressdialog)">Conditional</animation>
         </control>
       <control type="grouplist">
@@ -8481,7 +8481,7 @@
         <label>TVBAN</label>
         <align>left</align>
         <font>font_tiny_bold</font>
-        <textcolor>dodgerblue</textcolor>
+        <textcolor>dodgerblue</textcolor> <!-- ff76f110 -->
       </control>
       <control type="list" id="9000">
         <onleft condition="Window.IsVisible(Home)">300</onleft>
@@ -8541,7 +8541,7 @@
         <fadetime>0</fadetime>
 	    <texture border="9" flipy="true" flipx="false">common/white.png</texture>
 		<!-- <bordertexture colordiffuse="$VAR[ColorHighlight]">common/white.png</bordertexture> -->
-        <bordertexture colordiffuse="dodgerblue">common/white.png</bordertexture>
+        <bordertexture colordiffuse="dodgerblue">common/white.png</bordertexture> <!--ff76f110 -->
         <bordersize>9</bordersize>
         <aspectratio>escale</aspectratio>
 	        </control>
@@ -8621,7 +8621,7 @@
         <label>TVBAN BUILD</label>
         <align>left</align>
         <font>font_tiny_bold</font>
-        <textcolor>ff32cd32</textcolor>
+        <textcolor>ff76f110</textcolor>
       </control>
       <control type="list" id="9001">
         <onleft condition="Window.IsVisible(Home)">300</onleft>
@@ -8681,7 +8681,7 @@
         <fadetime>0</fadetime>
 	    <texture border="9" flipy="true" flipx="false">common/white.png</texture>
         <!-- <bordertexture colordiffuse="$VAR[ColorHighlight]">common/white.png</bordertexture> -->
-		<bordertexture colordiffuse="FF32cd32">common/white.png</bordertexture>
+		<bordertexture colordiffuse="FF76f110">common/white.png</bordertexture>
         <bordersize>9</bordersize>
         <aspectratio>escale</aspectratio>
 	        </control>
@@ -8727,7 +8727,7 @@
           </item>
           <item>
             <label>Gestionar Buffer</label>
-            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=advanced_settings&amp;url=https%3A%2F%2Fraw.githubusercontent.com%2Ftvban%2Ftvban.github.io%2Fmaster%2Fwizard%2Fxml%2FAdvance-Matrix.json",return)</onclick>
+            <onclick>ActivateWindow(Programs,"plugin://plugin.program.TVBAN-Matrix/?mode=advanced_settings&amp;url=https%3A%2F%2Fraw.githubusercontent.com%2Fgtkingbuild%2Fgtkingbuild.github.io%2Fmaster%2Fwizard%2Fxml%2FAdvance-Matrix.json",return)</onclick>
             <thumb>special://skin/extras/icons/hourglass2.png</thumb>
           </item>		  
           <item>
